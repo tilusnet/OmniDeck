@@ -2,11 +2,13 @@
 
 import pycountry
 
+hostname = 'http://omniglot.com'
+
 
 class Phrases:
     
-    _base_url = 'http://omniglot.com/language/phrases'
-    _url_by_lang_template = _base_url + '/{lang}.htm'
+    _base_url = hostname + '/language/phrases'
+    _url_by_lang_template = _base_url + '/{lang}.php'
     _url_by_phrase_template = _base_url + '/{phrase}.htm'
 
     def get_lang_url(self, lang_id):
